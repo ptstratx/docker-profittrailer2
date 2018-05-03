@@ -1,0 +1,70 @@
+version: '3'
+services:
+  profittrailer-btc:
+    build: ./docker/profittrailer2/
+    container_name: pt-btc
+    env_file:
+      - ./pt-btc/pt.env
+    environment:
+      - VIRTUAL_HOST=pt-btc.yourhostname.com
+    volumes:
+      - "./pt-btc/ProfitTrailerData.json:/opt/ProfitTrailer/ProfitTrailerData.json"
+      - "./pt-btc/ptpw:/opt/ProfitTrailer/ptpw"
+      - "./pt-btc/trading/DCA.properties:/opt/ProfitTrailer/trading/DCA.properties"
+      - "./pt-btc/trading/INDICATORS.properties:/opt/ProfitTrailer/trading/INDICATORS.properties"
+      - "./pt-btc/tddrading/PAIRS.properties:/opt/ProfitTrailer/trading/PAIRS.properties"
+    restart: always
+
+  profittrailer-eth:
+    build: ./docker/profittrailer2/
+    container_name: pt-eth
+    env_file:
+      - ./pt-eth/pt.env
+    environment:
+      - VIRTUAL_HOST=pt-eth.yourhostname.com
+    volumes:
+      - "./pt-eth/ProfitTrailerData.json:/opt/ProfitTrailer/ProfitTrailerData.json"
+      - "./pt-eth/ptpw:/opt/ProfitTrailer/ptpw"
+      - "./pt-eth/trading/DCA.properties:/opt/ProfitTrailer/trading/DCA.properties"
+      - "./pt-eth/trading/INDICATORS.properties:/opt/ProfitTrailer/trading/INDICATORS.properties"
+      - "./pt-eth/trading/PAIRS.properties:/opt/ProfitTrailer/trading/PAIRS.properties"
+    restart: always
+
+  pttracker-btc:
+    build: ./docker/pttracker/
+    container_name: ptt-btc
+    env_file:
+      - ./pt-btc/pt.env
+    environment:
+      - VIRTUAL_HOST=ptt-btc.yourhostname.com
+      - WEB_URL=http:\/\/pt-btc:8081
+    restart: always
+
+  pttracker-eth:
+    build: ./docker/pttracker/
+    container_name: ptt-eth
+    env_file:
+      - ./pt-eth/pt.env
+    environment:
+      - VIRTUAL_HOST=ptt-eth.yourhostname.com
+      - WEB_URL=http:\/\/pt-eth:8081
+    restart: always
+
+  ptnotifications:
+    build: ./docker/ptnotifications/
+    container_name: ptnotifications
+    env_file:
+      - ./ptnotifications/ptnotifications.env
+    restart: always
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: pt-nginx-proxy
+    ports:
+#      - "8445:443"
+      - "8080:80"
+    volumes:
+      - "./nginx/htpasswd:/etc/nginx/htpasswd"
+#     - "./nginx/certs:/etc/nginx/certs"
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    restart: always

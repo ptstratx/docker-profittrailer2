@@ -1,0 +1,43 @@
+license = ${LICENSE}
+
+server.port = ${SERVER_PORT}
+server.test_mode = ${SERVER_TEST_MODE}
+server.api_token = ${SERVER_API_TOKEN}
+server.sitename = ${SERVER_SITENAME}
+
+trading.exchange = ${TRADING_EXCHANGE}
+trading.log_history = ${TRADING.LOG_HISTORY}
+
+server.disable_password = ${SERVER_DISABLE_PASSWORD}
+server.timezone_offset = ${SERVER_TIMEZONE_OFFSET}
+server.language = ${SERVER_LANGUAGE}
+server.skin = ${SERVER_SKIN}
+server.currency = ${SERVER_CURRENCY}
+
+server.disable_notification = ${SERVER_DISABLE_NOTIFICATION}
+server.disable_browser = ${SERVER_DISABLE_BROWSER}
+server.enable_shutdown = ${SERVER_ENABLE_SHUTDOWN}
+server.disable_config = ${SERVER_DISBALE_CONFIG}
+server.disable_online_config = ${SERVER_DISABLE_ONLINE_CONFIG}
+
+server.start_trading_delay = ${SERVER_START_TRADING_DELAY}
+
+telegram.bot_token_1 = ${TELEGRAM_BOT_TOKEN_1}
+telegram.chat_1 = ${TELEGRAM_CHAT_1}
+telegram.disable_notification = ${TELEGRAM_DISABLE_NOTIFICATION}
+
+discord.bot_token_1 = ${DISCORD_BOT_TOKEN_1}
+discord.chat_1 = ${DISCORD_CHAT_1}
+
+default_api_key          = ${DEFAULT_API_KEY}
+default_api_secret       = ${DEFAULT_API_SECRET}
+trading_api_key          = ${TRADING_API_KEY}
+trading_api_secret       = ${TRADING_API_SECRET}
+
+telegram.startup_notification = ${TELEGRAM_STARTUP_NOTIFICATION}
+discord.startup_notification = ${DISCORD_STARTUP_NOTIFICATION}
+telegram.shutdown_notification = ${TELEGRAM_SHUTDOWN_NOTIFICATION}
+discord.shutdown_notification = ${DISCORD_SHUTDOWN_NOTIFICATION}
+
+connection.timeout = ${CONNECTION_TIMEOUT}
+#logging.level.nl.komtek = ${LOGGING_LEVEL_NL_KOMTEK}

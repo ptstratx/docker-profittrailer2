@@ -1,0 +1,21 @@
+{
+  "General": {
+    "BotName": "${SERVER_SITENAME}",
+    "Port": 3000,
+    "FiatCurrency": "${SERVER_CURRENCY}",
+    "SslEnabled": "false",
+    "LogLevel": "info",
+    "PtDataSyncSecs": 15,
+    "ConfigSyncSecs": 5
+  },
+  "ProfitTrailer": {
+    "WebUrl": "${WEB_URL}",
+    "WebPassword": "${WEB_PASSWORD}",
+    "License": "${LICENSE}",
+    "Exchange": "${TRADING_EXCHANGE}"
+  },
+  "Transfers": {
+    "12/31/2017": 0
+  }
+}
+${dummy}

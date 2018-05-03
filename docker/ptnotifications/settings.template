@@ -1,0 +1,54 @@
+#Make sure to give your Profit Trailer instances a unique server.sitename (application.properties) so you can distinguish them
+
+#Set to the number of PT instance you are adding
+profitTrailer_instances = ${PROFITTRAILER_INSTANCES}
+
+profitTrailer_address_1 = ${PROFITTRAILER_ADDRESS_1}
+profitTrailer_license_key_1 = ${PROFITTRAILER_LICENSE_KEY_1}
+profitTrailer_instance_api_token_1 = ${PROFITTRAILER_INSTANCE_API_TOKEN_1}
+
+profitTrailer_address_2 = ${PROFITTRAILER_ADDRESS_2}
+profitTrailer_license_key_2 = ${PROFITTRAILER_LICENSE_KEY_2}
+profitTrailer_instance_api_token_2 = ${PROFITTRAILER_INSTANCE_API_TOKEN_2}
+
+profitTrailer_address_3 = ${PROFITTRAILER_ADDRESS_3}
+profitTrailer_license_key_3 = ${PROFITTRAILER_LICENSE_KEY_3}
+profitTrailer_instance_api_token_3 = ${PROFITTRAILER_INSTANCE_API_TOKEN_3}
+
+profitTrailer_address_4 = ${PROFITTRAILER_ADDRESS_4}
+profitTrailer_license_key_4 = ${PROFITTRAILER_LICENSE_KEY_4}
+profitTrailer_instance_api_token_4 = ${PROFITTRAILER_INSTANCE_API_TOKEN_4}
+
+profitTrailer_address_5 = ${PROFITTRAILER_ADDRESS_5}
+profitTrailer_license_key_5 = ${PROFITTRAILER_LICENSE_KEY_5}
+profitTrailer_instance_api_token_5 = ${PROFITTRAILER_INSTANCE_API_TOKEN_5}
+
+#Example
+#profitTrailer_address_2 = http://localhost:8082
+#profitTrailer_license_key_2 = 1234567abcd8910
+#profitTrailer_instance_api_token_2 = bot_api_token
+
+#Enable or disable Telegram notifications
+telegram_enabled = ${TELEGRAM_ENABLED}
+telegram_bot_token = ${TELEGRAM_BOT_TOKEN}
+telegram_channel_id = ${TELEGRAM_CHANNEL_ID}
+
+#Enable or disable Discord notifications
+discord_enabled = ${DISCORD_ENABLED}
+discord_bot_token = ${DISCORD_BOT_TOKEN}
+discord_channel_id = ${DISCORD_CHANNEL_ID}
+
+#Enable or disable Sell notifications
+sell_notifications = ${SELL_NOTIFICATION}
+#Enable or disable Buy notifications
+buy_notifications = ${BUY_NOTIFICATION}
+#Enable or disable Sell Only Mode notifications
+som_notifications = ${SOM_NOTIFICATION}
+#Enable or disable Profit Trailer error notifications
+error_notifications = ${ERROR_NOTIFICATION}
+#Enable or disable release/update notifications
+update_notifications = ${UPDATE_NOTIFICATION}
+#Enable or disable access to settings
+enable_settings = ${ENABLE_SETTINGS}
+#Add error messages that need to be ignored seperated by a comma i.e. SomeKindOfExchangeError,AnotherExchangeError
+error_filter = BinanceWebSocketAdapterKline,APIKEY_INVALID
